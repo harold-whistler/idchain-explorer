@@ -33,7 +33,7 @@ class Footer extends Component {
           <span className="footer__legal">
             <div>Copyright &copy; 2018 - {currentYear} <a href={config.coinDetails.websiteUrl} target="_blank" rel="nofollow noopener">{config.coinDetails.longName}</a></div>
 
-            <div>Bulwark Explorer &copy; 2018 - {currentYear} <a href="https://bulwarkcrypto.com/" target="_blank" rel="nofollow noopener">Bulwark Cryptocurrency</a></div>
+            <div>IDChain Explorer &copy; 2019 - {currentYear} <a href="https://id-chain.org/" target="_blank" rel="nofollow noopener">Interactive Decisions Chain</a></div>
           </span>
         </div>
         <div className="footer__block">

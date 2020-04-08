@@ -91,7 +91,7 @@ installBulwark () {
     echo "Installing Bulwark..."
     mkdir -p /tmp/bulwark
     cd /tmp/bulwark
-    curl -Lo bulwark.tar.gz $bwklink
+    curl -Lo bulwark.tar.gz $IDClink
     tar -xzf bulwark.tar.gz
     sudo mv * /usr/local/bin
     cd
@@ -158,17 +158,17 @@ const { SocialType } = require('./features/social/data');
 
 /**
  * Global configuration object.
- * 
+ *
  * Running:
  * yarn run start:api
  * yarn run start:web (Access project via http://localhost:8081/) (port comes from webpack.config.js)
- * 
+ *
  * For nginx server installation and production read /script/install.sh `installNginx ()`. Note that we use Certbot to grant SSL certificate.
- * 
+ *
  */
 const config = {
   api: {
-    host: 'http://localhost', // ex: 'https://explorer.id-chain.org' for nginx (SSL), 'http://IP_ADDRESS' 
+    host: 'http://localhost', // ex: 'https://explorer.id-chain.org' for nginx (SSL), 'http://IP_ADDRESS'
     port: '3000', // ex: Port 3000 on prod and localhost
     portWorker: '3000', // ex: Port 443 for production(ngingx) if you have SSL (we use certbot), 3000 on localhost or ip
     prefix: '/api',
@@ -176,12 +176,12 @@ const config = {
   },
   coinDetails: {
     name: 'Bulwark',
-    shortName: 'BWK',
+    shortName: 'IDC',
     displayDecimals: 2,
-    longName: 'Bulwark Cryptocurrency',
+    longName: 'Interactive Decisions Chain',
     coinNumberFormat: '0,0.0000',
     coinTooltipNumberFormat: '0,0.0000000000', // Hovering over a number will show a larger percision tooltip
-    websiteUrl: 'https://bulwarkcrypto.com/',
+    websiteUrl: 'https://id-chain.org/',
     masternodeCollateral: 5000 // MN ROI% gets based on this number. If your coin has multi-tiered masternodes then set this to lowest tier (ROI% will simply be higher for bigger tiers)
   },
   offChainSignOn: {
@@ -217,9 +217,9 @@ const config = {
       }
     }
   ],
-  
+
   freegeoip: {
-    api: 'https://extreme-ip-lookup.com/json/' //@todo need to find new geoip service as the limits are too small now (hitting limits) 
+    api: 'https://extreme-ip-lookup.com/json/' //@todo need to find new geoip service as the limits are too small now (hitting limits)
   },
   coinMarketCap: {
     api: 'http://api.coinmarketcap.com/v1/ticker/',
@@ -249,25 +249,25 @@ const config = {
        */
 
       /*
-      // 72000 BWK 159ff849ae833c3abd05a7b36c5ecc7c4a808a8f1ef292dad0b02875009e009e
+      // 72000 IDC 159ff849ae833c3abd05a7b36c5ecc7c4a808a8f1ef292dad0b02875009e009e
       "bZ1HJB1kEb1KFcVA42viGJPM7896rsRp9x",
-      // 72000 BWK d35ed6e32886c108165c50235225da29ea3432404a4578831a8120b803e23f3d
+      // 72000 IDC d35ed6e32886c108165c50235225da29ea3432404a4578831a8120b803e23f3d
       "bSP75eHtokmNq5n8iDVLbZVKuLAi8rN1KM",
-      // 70000 BWK 5b3b0eec9271297a37c97fca1ecd98e033ea3813d8669346bfac0f08aa3142f8
+      // 70000 IDC 5b3b0eec9271297a37c97fca1ecd98e033ea3813d8669346bfac0f08aa3142f8
       "bQockBvNDLUJ4zFV3g2EsymfuVxduWPpmA",
-      // 45000 BWK 6a9fbf985e8d1737c3282d34759748ca02ab9c7893bd6d24dd5d72db66325707
-      // 37000 BWK 3c1f46128606ddca07a4691f8697974c8789ca365c6f3ac8e7d866740450cb59
+      // 45000 IDC 6a9fbf985e8d1737c3282d34759748ca02ab9c7893bd6d24dd5d72db66325707
+      // 37000 IDC 3c1f46128606ddca07a4691f8697974c8789ca365c6f3ac8e7d866740450cb59
       "bR1Qa5HjuU8bN3J2WqrM2FSWzmk7RPyujp",
-      // 25000 BWK 8ab5e85f2863afa1fdab187a2747d492a0d2a3903038063dbd5e187a76efdb03
-      // 25000 BWK 98d82c3e6fd371daeaee45ed56875c413c5a6f596571fdb8888e8bf23b3e530c
+      // 25000 IDC 8ab5e85f2863afa1fdab187a2747d492a0d2a3903038063dbd5e187a76efdb03
+      // 25000 IDC 98d82c3e6fd371daeaee45ed56875c413c5a6f596571fdb8888e8bf23b3e530c
       "bUagNLYEPmDTbnr7QgqFJidnASxvjNp2Kh",
-      // 20000 BWK c86852e84b0c8d31af953ad75c42a6f581f8f2bb6f8835e7e9080694f92151c8
-      // 20000 BWK 78bb316c7d66067df8d279a74c619aaac4b5412066ef0b87b9b6765960895ade
-      // 50 BWK 22bc15f46408eeafe4b2ac6f54ddbb9c3b277848a44ae4db2da7100dda2da1ec
+      // 20000 IDC c86852e84b0c8d31af953ad75c42a6f581f8f2bb6f8835e7e9080694f92151c8
+      // 20000 IDC 78bb316c7d66067df8d279a74c619aaac4b5412066ef0b87b9b6765960895ade
+      // 50 IDC 22bc15f46408eeafe4b2ac6f54ddbb9c3b277848a44ae4db2da7100dda2da1ec
       "bVnzUZen6Sn473trmkd5vJ3zVMW8HwtnT9",
-      // 16500 BWK 2fc3878768ff97cb67d8336a7e6fef50dab71696f9c5fe33d4b6226468609efe
-      // 16500 BWK 9f011213e8b6890ab1ec66f037f1e16f3c8c138289877e0572b498aef31b3020
-      // 16500 BWK ac562d3f239b2896d293b3126e83bbf6bef618ce59194657668b1b049dd094ad
+      // 16500 IDC 2fc3878768ff97cb67d8336a7e6fef50dab71696f9c5fe33d4b6226468609efe
+      // 16500 IDC 9f011213e8b6890ab1ec66f037f1e16f3c8c138289877e0572b498aef31b3020
+      // 16500 IDC ac562d3f239b2896d293b3126e83bbf6bef618ce59194657668b1b049dd094ad
       "bTHnr8H5anfhsx222Q5jgE3JjFog7pk5Cd"
       */
     ]
@@ -305,7 +305,7 @@ const config = {
       // Adds a new label metadata address
       carverAddressLabelWidget: {
         label: 'Masternode Rewards ðŸ’Ž',
-        title: 'Each block contains a small portion that is awarded to masternode operators that lock 5000 BWK. Masternodes contribute to the network by handling certain coin operations within the network.'
+        title: 'Each block contains a small portion that is awarded to masternode operators that lock 5000 IDC. Masternodes contribute to the network by handling certain coin operations within the network.'
       }
     },
     'POW': {
@@ -319,7 +319,7 @@ const config = {
       // Adds a new label metadata address
       carverAddressLabelWidget: {
         label: 'Proof Of Stake Rewards ðŸ’Ž',
-        title: 'Inputs that are over 100 BWK can participate in network upkeep. Each block (~90 seconds) one of these inputs is rewarded for keeping up the network.'
+        title: 'Inputs that are over 100 IDC can participate in network upkeep. Each block (~90 seconds) one of these inputs is rewarded for keeping up the network.'
       }
     },
   },
@@ -413,10 +413,10 @@ clear
 
 # Variables
 echo "Setting up variables..."
-bwklink=`curl -s https://api.github.com/repos/bulwark-crypto/bulwark/releases/latest | grep browser_download_url | grep linux64 | cut -d '"' -f 4`
+IDClink=`curl -s https://api.github.com/repos/bulwark-crypto/bulwark/releases/latest | grep browser_download_url | grep linux64 | cut -d '"' -f 4`
 rpcuser=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13 ; echo '')
 rpcpassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
-echo "Repo: $bwklink"
+echo "Repo: $IDClink"
 echo "PWD: $PWD"
 echo "User: $rpcuser"
 echo "Pass: $rpcpassword"
