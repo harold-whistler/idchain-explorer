@@ -25,7 +25,7 @@ server {
 
     root /var/www/html;
     index index.html index.htm index.nginx-debian.html;
-    #server_name explorer.bulwarkcrypto.com;
+    #server_name explorer.id-chain.org;
     server_name _;
 
     gzip on;
@@ -51,21 +51,21 @@ server {
 
     #listen [::]:443 ssl ipv6only=on; # managed by Certbot
     #listen 443 ssl; # managed by Certbot
-    #ssl_certificate /etc/letsencrypt/live/explorer.bulwarkcrypto.com/fullchain.pem; # managed by Certbot
-    #ssl_certificate_key /etc/letsencrypt/live/explorer.bulwarkcrypto.com/privkey.pem; # managed by Certbot
+    #ssl_certificate /etc/letsencrypt/live/explorer.id-chain.org/fullchain.pem; # managed by Certbot
+    #ssl_certificate_key /etc/letsencrypt/live/explorer.id-chain.org/privkey.pem; # managed by Certbot
     #include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     #ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
 
 #server {
-#    if ($host = explorer.bulwarkcrypto.com) {
+#    if ($host = explorer.id-chain.org) {
 #        return 301 https://\$host\$request_uri;
 #    } # managed by Certbot
 #
 #	listen 80 default_server;
 #	listen [::]:80 default_server;
 #
-#	server_name explorer.bulwarkcrypto.com;
+#	server_name explorer.id-chain.org;
 #   return 404; # managed by Certbot
 #}
 EOL
@@ -168,7 +168,7 @@ const { SocialType } = require('./features/social/data');
  */
 const config = {
   api: {
-    host: 'http://localhost', // ex: 'https://explorer.bulwarkcrypto.com' for nginx (SSL), 'http://IP_ADDRESS' 
+    host: 'http://localhost', // ex: 'https://explorer.id-chain.org' for nginx (SSL), 'http://IP_ADDRESS' 
     port: '3000', // ex: Port 3000 on prod and localhost
     portWorker: '3000', // ex: Port 443 for production(ngingx) if you have SSL (we use certbot), 3000 on localhost or ip
     prefix: '/api',
