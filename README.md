@@ -1,9 +1,7 @@
-![Bulwark Logo](https://bulwarkcrypto.com/wp-content/uploads/2018/04/blockexplorer.svg)
+![IDChain Logo](https://github.com/harold-whistler/idc-core/raw/master/repos/idc_banner_color_full.png)
 
-Bulwark Explorer
+IDChain Explorer
 &middot;
-[![GitHub license](https://img.shields.io/github/license/bulwark-crypto/bulwark-explorer.svg)](https://github.com/bulwark-crypto/bulwark-explorer/blob/master/COPYING) [![Build Status](https://travis-ci.org/bulwark-crypto/bulwark-explorer.svg?branch=master)](https://travis-ci.org/bulwark-crypto/bulwark-explorer) [![Discord](https://img.shields.io/discord/374271866308919296.svg)](https://discord.me/bulwarkcrypto) [![GitHub version](https://badge.fury.io/gh/bulwark-crypto%2Fbulwark-explorer.svg)](https://badge.fury.io/gh/bulwark-crypto%2Fbulwark-explorer)
-=====
 
 The most advanced blockchain eplorer for masternode, proof-of-stake and proof-of-work chains.
 
@@ -29,9 +27,9 @@ Features:
 
 ## Post-Installation
 
-Check block syncing status with `tail -f /home/explorer/blockex/tmp/block.log` 
+Check block syncing status with `tail -f /home/explorer/blockex/tmp/block.log`
 
-You will most likely see `Error: connect ECONNREFUSED` this is because your RPC username/password/port do not match your coin. Please check your coin `.config` file (ex: `/home/explorer/.bulwark/bulwark.conf`) 
+You will most likely see `Error: connect ECONNREFUSED` this is because your RPC username/password/port do not match your coin. Please check your coin `.config` file (ex: `/home/explorer/.idchain/idchain.conf`)
 
 You will see something like this:
 ```
@@ -46,7 +44,7 @@ Please ensure your `/home/explorer/blockex/config.js` matches the rpc informatio
 # Advanced Installation Instructions
 
 ## Required
-This repo assumes `git`, `mongodb`, `node`, `yarn`, and are installed with configuration done.  Please adjust commands to your local environment. 
+This repo assumes `git`, `mongodb`, `node`, `yarn`, and are installed with configuration done.  Please adjust commands to your local environment.
 
 Download links:
 
@@ -56,16 +54,11 @@ https://nodejs.org/en/download/package-manager/
 
 https://yarnpkg.com/lang/en/docs/install/
 
-It is also required to have the Bulwark daemon running in the background. It is recommended to set this up before beginning to set up the explorer so that it syncs by the time you need it.
-
-Our geniuses here at BulwarkCorp™ have put together a script to Install Bulwark daemon. Just run `bash script/bulwarkd_setup.sh`
-
-This will install the latest Bulwark wallet and create a rpc username/password before starting the daemon.
 
 ## Manual Install
-`git clone https://github.com/bulwark-crypto/bulwark-explorer.git` - copy repo to local folder.
+`https://github.com/harold-whistler/idchain-explorer.git` - copy repo to local folder.
 
-`cd blockex` - change into project directory.
+`cd idchain-explorer.git` - change into project directory.
 
 `yarn install` - install packages used by the system.
 
