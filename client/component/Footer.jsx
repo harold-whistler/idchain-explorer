@@ -59,22 +59,22 @@ class Footer extends Component {
           <div className="footer__social-media-wrapper">
             <div className="footer__social-title">Social Media</div>
             <div>
-              <a href="https://bitcointalk.org/index.php?topic=5220465" target="_blank" rel="nofollow noopener">
+              <a href="https://bitcointalk.org/index.php?topic=5154373.0" target="_blank" rel="nofollow noopener">
                 <Icon name="bitcoin" className="fab footer__social-media-icon" />
               </a>
-              <a href="https://discord.gg/a7vhegP" target="_blank" rel="nofollow noopener">
+              <a href="https://discord.gg/YVaZjxr" target="_blank" rel="nofollow noopener">
                 <Icon name="discord" className="fab footer__social-media-icon" />
               </a>
-              <a href="https://t.me/bulwarkcrypto" target="_blank" rel="nofollow noopener">
+              <a href="https://t.me/IDChain_Official" target="_blank" rel="nofollow noopener">
                 <Icon name="telegram" className="fab footer__social-media-icon" />
               </a>
-              <a href="https://www.reddit.com/r/BulwarkCoin/" target="_blank" rel="nofollow noopener">
+              <a href="https://www.reddit.com/user/ID_Chain" target="_blank" rel="nofollow noopener">
                 <Icon name="reddit" className="fab footer__social-media-icon" />
               </a>
-              <a href="https://github.com/bulwark-crypto" target="_blank" rel="nofollow noopener">
+              <a href="https://github.com/Nutshell-Exchange-project" target="_blank" rel="nofollow noopener">
                 <Icon name="github" className="fab footer__social-media-icon" />
               </a>
-              <a href="https://twitter.com/BulwarkCrypto" target="_blank" rel="nofollow noopener">
+              <a href="https://twitter.com/IDChain_Team" target="_blank" rel="nofollow noopener">
                 <Icon name="twitter" className="fab footer__social-media-icon" />
               </a>
             </div>
