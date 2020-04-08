@@ -96,10 +96,10 @@ export default class ChartComponent extends Component {
     lineSeries.applyOptions({
       priceLineVisible: false,
       priceLineWidth: 3,
-      priceLineColor: '#294dea',
+      priceLineColor: '#1f2b43',
       priceLineStyle: 3,
 
-      baseLineColor: '#294dea',
+      baseLineColor: '#1f2b43',
 
       priceFormat
     });
